@@ -7,6 +7,8 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+Console.Clear();
+
 Console.Write("Введите длину массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.Write("Критерий поиска, количество символов: ");
@@ -30,5 +32,16 @@ for (int j = 0; j < size; j++)
     {
         newArr[count] = arr[j];
         count++;
+    }
+}
+Console.WriteLine();
+Console.Write($"Результат поиска и сортировки в массиве: ");
+PrintArray(newArr);
+
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + "  ");
     }
 }
