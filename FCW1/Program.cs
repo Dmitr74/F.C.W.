@@ -14,8 +14,21 @@ int value = Convert.ToInt32(Console.ReadLine());
 string[] arr = new string[size];
 for (int i = 0; i < size; i++)
 {
-    Console.WriteLine($"Введите {i + 1}-й элемент массива: ");
+    Console.Write($"Введите {i + 1}-й элемент массива: ");
     string? str = Convert.ToString(Console.ReadLine());
     arr[i] = str!;
 }
+Console.WriteLine();
+Console.Write($"Введённый массив: ");
+PrintArray(arr);
 
+string[] newArr = new string[size];
+int count = 0;
+for (int j = 0; j < size; j++)
+{
+    if (arr[j].Length <= value)
+    {
+        newArr[count] = arr[j];
+        count++;
+    }
+}
